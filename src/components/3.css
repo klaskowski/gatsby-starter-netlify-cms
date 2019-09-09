@@ -1,0 +1,245 @@
+
+
+main {
+  padding: 40px 50px;
+  color: #003058;
+}
+
+header h2 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+header .label {
+  font-size: 12px;
+  margin-bottom: 0;
+  line-height: 0.9rem;
+}
+header .value {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+header {
+  background: #003058;
+  color: white;
+  padding: 50px 50px 10px 50px;
+}
+
+.column-50 {
+  vertical-align: top;
+  display: inline-block;
+  width: 50%;
+}
+
+.column1 {
+  vertical-align: top;
+  display: inline-block;
+  width: 67%;
+  padding-right: 20px;
+}
+
+.column2 {
+  vertical-align: top;
+  display: inline-block;
+  width: 33%;
+}
+
+.column1 img,
+.column2 img {
+  max-width: 160px;
+  margin-bottom: 0;
+  height: 30px;
+  display: inline-block;
+}
+
+.column2 img:first-of-type {
+  border-right: 1px solid lightgray;
+  padding: 0 10px 0 0;
+}
+
+.column2 img {
+  padding: 0 10px;
+}
+
+.testtaker-name {
+  font-size: 36px;
+}
+
+.versant-logo {
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+.main-score {
+  background: #e6eaee;
+  border-radius: 10px;
+  margin-top: -80px;
+  padding: 25px;
+  margin-bottom: 5px;
+}
+
+.skill-scores {
+  margin-bottom: 10px;
+}
+
+.other-scales {
+  border-radius: 10px;
+  padding: 25px 12px;
+  background: #003058;
+  color: white;
+}
+
+.other-scales h3 {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 1.3rem;
+}
+
+.other-scales h3,
+.other-scales h4 {
+  font-weight: normal;
+}
+
+.other-scales h4,
+.other-scales p {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.other-scales p {
+  margin-bottom: 1.1rem;
+}
+
+.other-scales p:last-of-type {
+  margin-bottom: 0;
+}
+
+.gse-score {
+  text-align: center;
+  line-height: 60px;
+  margin-bottom: 0;
+}
+
+.gse-score-number {
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.gse-label {
+  text-align: center;
+  margin-bottom:0;
+}
+
+.skill-other-scales {
+  float: right;
+  margin-left: 5px;
+  margin-top: 5px;
+  background: #e6eaee;
+  font-size: 10px;
+  line-height: 12px;
+  color: gray;
+  padding: 4px 10px;
+  border-radius: 40px;
+  font-weight: normal;
+}
+
+.skill-other-scales .skill-max{
+  font-size: 13px;
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid lightgray;
+}
+
+.skill-other-scales .skill-score {
+  color: #003058; 
+}
+
+.skill-max {
+  font-size: 14px;
+  color: gray;
+}
+
+.skill-score {
+  font-weight: bold;
+}
+
+.overall-score-descriptor {
+  height: 155px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.skill-descriptor {
+  font-size: 10px;
+  line-height: 16px;
+  margin-bottom: 1.25rem;
+}
+
+.other-skills {
+  margin-bottom: -40px;
+}
+
+.other-skills .skill-descriptor {
+  margin-bottom: 10px;
+}
+
+.skill-descriptor.score {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.other-skills h4 {
+  margin-bottom: .5rem;
+  font-size: 16px;
+}
+
+.supplement-page {
+  padding: 0 0 0 50px;
+}
+
+.tips {
+  width: calc(67% - 35px);
+  padding-top: 40px;
+}
+
+.definitions {
+  width: calc(33% + 35px);
+  background: #e6eaee;
+  padding: 50px 30px 0;
+}
+
+@media print {
+  .definitions {
+    margin-top: -1px;
+    height: 29.7cm;
+  }
+}
+
+.definitions h3 {
+  font-size: 18px;
+}
+
+.definitions h4 {
+  font-size: 11px;
+}
+
+.definitions .skill-descriptor:last-of-type {
+  margin-bottom: 25px;
+}
+
+.tips h4 {
+  background: #003058;
+  color: white;
+  padding: 4px 8px;
+}
+
+.tips p.skill-descriptor {
+  margin-bottom: 0;
+}
+
+.tips p.skill-descriptor:last-of-type {
+  margin-bottom: 1.2rem;
+}

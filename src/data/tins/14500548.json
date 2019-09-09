@@ -1,0 +1,71 @@
+{
+    "tin": "14500548",
+    "name": "John Smith",
+    "endTime": 1564507800000,
+    "variant": 415,
+    "mainScore": {
+        "label": "Overall Score",
+        "gse": 51,
+        "versant": 41,
+        "cefr": "B1",
+        "description": "Candidate can handle many utterances using a variety of words and structures, and can follow and sometimes participate in a native-paced conversation. Pronunciation is mostly intelligible; candidate can express some composite information on familiar topics to a cooperative listener. Candidate understands texts using a variety of words and structures, and given enough time can produce written texts for general purposes. Writing contains errors or inappropriate word choice, but the message is clear to a sympathetic reader.",
+        "tip": "Candidate can handle many utterances using a variety of words and structures, and can follow and sometimes participate in a native-paced conversation. Pronunciation is mostly intelligible; candidate can express some composite information on familiar topics to a cooperative listener.",
+        "definition": "The Overall Score of the test represents the ability to understand spoken English and speak it intelligibly at a nativelike conversational pace on everyday topics. Scores are based on a weighted combination of four diagnostic subscores. Scores are reported in the range from 20 to 80"
+    },
+    "minorScores": [{
+        "label": "Intelligibility",
+        "definition": "Intelligibility is a measure of how understandable a candidate is as a speaker",
+        "value": "4/5",
+        "description": "An intelligibility score of 4 means that this candidate’s speech is generally understandable, but that it sometimes requires a bit of effort on the part of listeners."
+    }],
+    "scores":[{
+        "label": "Sentence mastery",
+        "gse": 40,
+        "versant": 39,
+        "cefr": "A2",
+        "description": "Candidate has difculty understanding, recalling or producing English sentences, even with simple phrases and/or clauses.",
+        "tips": [
+            "Practice giving detailed accounts of experiences (e.g., autobiographical, biographical, or fictional) describing your feelings and reactions to the events.",
+            "Practice summarizing your opinions about short stories, articles, talks, discussions, interviews, or documentaries",
+            "Practice keeping up with language spoken at a normal speed by watching and summarizing TV news and current affairs programs, documentaries, live interviews, talk shows, plays, and films."
+        ],
+        "definition": "Sentence Mastery refects the ability to understand, recall and produce English phrases and clauses in complete sentences. Performance depends on accurate syntactic processing and appropriate usage of words, phrases and clauses in meaningful sentence structures."
+    }, {
+        "label": "Vocabulary",
+        "gse": 45,
+        "versant": 35,
+        "cefr": "B1",
+        "description": "Candidate has a limited understanding of basic spoken English words, even when they are used in clear, simple speech.",
+        "tips": [
+            "Expand your repertoire of vocabulary items and phrases to be able to avoid frequent repetition, broadening your range of stock phrases (e.g., “I mean...”, “That is to say...”, “Let me think about that...”) to gain time and keep the turn while formulating what to say.",
+            "Actively participate in conversations to practice language use on a wide range of general, academic, vocational, or leisure topics.",
+            "Practice using a variety of linking words efficiently to mark clearly the relationships between ideas.",
+            "Try to express finer shades of meaning by using a wider range of qualifying devices (e.g., adverbs expressing degree, clauses expressing limitations), adding less frequent words, phrases, and idioms to your repertoire."
+        ],
+        "definition": "Vocabulary reflects the ability to understand common everyday words spoken in sentence context and to produce such words as needed; Performance depends on familiarity with the form and meaning of everyday words and their use in connected speech."
+    }, {
+        "label": "Fluency",
+        "gse": 57,
+        "versant": 47,
+        "cefr": "B1",
+        "description": "Candidate speaks with uneven or staccato pacing, although speech may contain some smooth runs containing several words. Frequent obvious pauses result in an irregular speech rate and some disconnected phrases.",
+        "tips": [
+            "Practice giving detailed accounts of experiences (e.g., autobiographical, biographical, or fictional) describing your feelings and reactions to the events.",
+            "Practice summarizing your opinions about short stories, articles, talks, discussions, interviews, or documentaries",
+            "Practice keeping up with language spoken at a normal speed by watching and summarizing TV news and current affairs programs, documentaries, live interviews, talk shows, plays, and films."
+        ],
+        "definition": "Fluency reflects the rhythm, phrasing and timing evident in constructing, reading and repeating sentences"
+    }, {
+        "label": "Pronounciation",
+        "gse": 63,
+        "versant": 53,
+        "cefr": "B2",
+        "description": "Candidate produces many vowels and consonants in a clear manner, although some sounds are nonnative. Stress is correctly placed in many words, although consistent omissions or simplifcations are notable. Speech is mostly intelligible, but some listeners may have to adjust to the accent.",
+        "tips": [
+            "Practice giving detailed accounts of experiences (e.g., autobiographical, biographical, or fictional) describing your feelings and reactions to the events.",
+            "Practice summarizing your opinions about short stories, articles, talks, discussions, interviews, or documentaries",
+            "Practice keeping up with language spoken at a normal speed by watching and summarizing TV news and current affairs programs, documentaries, live interviews, talk shows, plays, and films."
+        ],
+        "definition": "Pronunciation reflects the ability to produce consonants, vowels and stress in a native-like manner in sentence context; Performance depends on knowledge of the phonological structure of everyday words."
+    }]
+}

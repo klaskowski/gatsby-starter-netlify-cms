@@ -1,0 +1,76 @@
+{
+    "tin": "14500547",
+    "name": "John Smith",
+    "endTime": 1564507800000,
+    "variant": 414,
+    "mainScore": {
+        "label": "Overall Score",
+        "gse": 51,
+        "versant": 41,
+        "cefr": "B1",
+        "description": "Candidate can handle many utterances using a variety of words and structures, and can follow and sometimes participate in a native-paced conversation. Pronunciation is mostly intelligible; candidate can express some composite information on familiar topics to a cooperative listener. Candidate understands texts using a variety of words and structures, and given enough time can produce written texts for general purposes. Writing contains errors or inappropriate word choice, but the message is clear to a sympathetic reader."
+    },
+    "minorScores": [{
+        "label": "Typing accuracy",
+        "definition": "Typing accuracy is a measure of how adequate the candidate’s typing is for written responses within the Versant English Placement test",
+        "value": "67% words typed accurately",
+        "description": "An accuracy of 67% means that some attention should be paid to the writing score - if it is low, then accuracy may have been a contributing factor."
+    }, {
+        "label": "Intelligibility",
+        "definition": "Intelligibility is a measure of how understandable a candidate is as a speaker",
+        "value": "4/5",
+        "description": "An intelligibility score of 4 means that this candidate’s speech is generally understandable, but that it sometimes requires a bit of effort on the part of listeners."
+    }],
+    "scores":[{
+        "label": "Speaking",
+        "gse": 39,
+        "versant": 29,
+        "cefr": "A2",
+        "description": "Candidate produces some simple phrases and sentences. Candidate speaks in a slow manner with many hesitations, false starts, and/or long pauses, and pronunciation is strongly non-English in character.",
+        "tips": [
+            "Practice giving detailed accounts of experiences (e.g., autobiographical, biographical, or fictional) describing your feelings and reactions to the events.",
+            "Practice giving clear, detailed descriptions of complex subjects.",
+            "Practice using appropriate stress and intonation to convey shades of meaning precisely.",
+            "Focus on developing a clear pronunciation and intonation."
+        ],
+        "definition": "Speaking reflects the ability to produce intelligible communication in spoken English in everyday and workplace situations. The score is based on the ability to produce consonants, vowels, and stress in a native-like manner, use accurate syntactic processing and appropriate usage of words in meaningful sentence structures, as well as use appropriate rhythm, phrasing, and timing."
+    }, {
+        "label": "Listening",
+        "gse": 45,
+        "versant": 35,
+        "cefr": "B1",
+        "description": "Candidate understands simple everyday conversational speech when it is spoken clearly and directed at him/her",
+        "tips": [
+            "Practice keeping up with language spoken at a normal speed by watching and summarizing TV news and current affairs programs, documentaries, live interviews, talk shows, plays, and films.",
+            "Actively listen to extended speech of varying styles (formal speeches, academic talks, news items, television debates, etc.) on an increasing range of topics, including abstract and complex topics within and outside of your interests and/or field."
+        ],
+        "definition": "Listening reflects the ability to understand specific details and main ideas from everyday and workplace speech. The score is based on the ability to track meaning and infer the message from English that is spoken at a conversational pace."
+
+    }, {
+        "label": "Writing",
+        "gse": 57,
+        "versant": 47,
+        "cefr": "B1",
+        "description": "Candidate writes straightforward texts on familiar subjects using a limited range of grammatical structures and an adequate range of common English words.",
+        "tips": [
+            "Practice writing personal letters and emails sharing your thoughts about abstract topics such as books, music, and film.",
+            "Practice writing about hypothetical situations and speculating about causes and consequences.",
+            "Practice writing arguments, explaining significant points, presenting supporting details, and rounding off with an appropriate conclusion."
+        ],
+        "definition": "Writing reflects the ability to produce accurate, appropriate written responses at a functional pace on everyday and workplace topics. The score is based on the ability to present ideas and information in a clear and logical sequence, use a wide range of appropriate words, use appropriate register, as well as a variety of sentence structures."
+
+    }, {
+        "label": "Reading",
+        "gse": 63,
+        "versant": 53,
+        "cefr": "B2",
+        "description": "Candidate reads, understands and responds to simple written texts, but has difficulty dealing with more complex texts.",
+        "tips": [
+            "Practice reading a variety of different texts (short stories, news reports, business documents, manuals, interviews) on an increasing range of topics, including abstract and complex topics within and outside of your interests and/or field.",
+            "Practice scanning long and complex texts, locating the main points and important details",
+            "Practice reading a variety of different texts (short stories, news reports, business documents, manuals, interviews) on an increasing range of topics, including abstract and complex topics within and outside of your interests and/or field.",
+            "Practice scanning long and complex texts, locating the main points and important details"
+        ],
+        "definition": "Reading reflects the ability to understand written English texts on everyday and workplace topics. The score is based on the ability to operate at functional speeds to extract details and main ideas, infer the message, and construct meaning."
+    }]
+}
