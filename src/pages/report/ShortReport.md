@@ -1,7 +1,7 @@
 ---
 templateKey: report
 title: Short Report
-versantlogo: /img/chemex.jpg
-pearsonlogo: /img/coffee.png
-partnerlogo: /img/flavor_wheel.jpg
+versantlogo: /img/versant.png
+pearsonlogo: /img/pearson.png
+partnerlogo: /img/accenture.png
 ---

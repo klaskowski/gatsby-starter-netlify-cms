@@ -12,7 +12,7 @@ export const ReportTemplate = ({
 }) => {
   const report = tinsJson;
   return <React.Fragment>
-    <header>
+    <header className="header">
       <div className="row">
         <div className="column1">
           <div className="versant-logo">
@@ -150,9 +150,9 @@ paper-and-pencil, multiple-choice assessment that elicits responses in two secti
 export default ({ data }) => 
   <Layout>
     <ReportTemplate
-      versantlogo={data.markdownRemark.frontmatter.versantlogo.publicURL}
-      pearsonlogo={data.markdownRemark.frontmatter.pearsonlogo.publicURL}
-      partnerlogo={data.markdownRemark.frontmatter.partnerlogo.publicURL}
+      versantlogo={data.markdownRemark.frontmatter.versantlogo}
+      pearsonlogo={data.markdownRemark.frontmatter.pearsonlogo}
+      partnerlogo={data.markdownRemark.frontmatter.partnerlogo}
     />
   </Layout>
 
@@ -162,15 +162,9 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        versantlogo {
-          publicURL
-        }
-        pearsonlogo {
-          publicURL
-        }
-        partnerlogo {
-          publicURL
-        }
+        versantlogo
+        pearsonlogo
+        partnerlogo
       }
     }
   }

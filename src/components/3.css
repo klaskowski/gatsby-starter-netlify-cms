@@ -1,3 +1,20 @@
+:root {
+  --darkgray: #505658;
+  --navy: #002f54;
+  --blueish: rgba(1, 143, 181, 0.4);
+  --bluetint: rgba(1, 143, 181, 0.2);
+  --shade: rgba(0, 0, 0, 0.1);
+  --smaller-shade: rgba(0, 0, 0, 0.05);
+  --darken: rgba(234, 238, 241, 0.3);
+  --gray: #999999;
+  --seablue: #017ea0;
+  --lightseablue: #0093bb;
+  --x: #005a71;
+  --orange: #ea7600;
+  --light: #eaeef1;
+  --navish: rgba(0, 47, 84, 0.1);
+}
+
 main {
   padding: 40px 50px;
   color: #003058;
@@ -19,7 +36,7 @@ header .value {
   margin-bottom: 0;
 }
 
-header {
+header.header {
   background: #003058;
   color: white;
   padding: 50px 50px 10px 50px;

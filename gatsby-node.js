@@ -3,10 +3,13 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
-exports.createPages = ({ actions, graphql }) => {
+const slug = require(`slug`)
+const slash = require(`slash`)
+
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  return graphql(`
+  const result = await graphql(`
     {
       allMarkdownRemark(limit: 1000) {
         edges {
@@ -15,37 +18,45 @@ exports.createPages = ({ actions, graphql }) => {
             fields {
               slug
             }
-            frontmatter {
+            frontmatter {              
               templateKey
             }
           }
         }
       }
+      allTinsJson(limit: 1000) {
+        edges {
+          node {
+            id
+            name
+            tin
+            variant
+          }
+        }
+      }
     }
-  `).then(result => {
+  `)
+
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const reportTemplates = result.data.allMarkdownRemark.edges
 
-    posts.forEach(edge => {
-      const id = edge.node.id
+    const v3 = path.resolve(`src/templates/report.js`)
+    result.data.allTinsJson.edges.forEach(edge => {
       createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/report.js`
-        ),
-        // additional data can be passed via context
+        path: `/${slug(edge.node.tin)}/`,
+        component: slash(v3),
         context: {
-          id,
-        },
+          id: reportTemplates.find(el => el.node.frontmatter.templateKey == "report").node.id,
+          report: edge.node.id,
+        }
       })
     })
-  })
-}
+  }
+
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
