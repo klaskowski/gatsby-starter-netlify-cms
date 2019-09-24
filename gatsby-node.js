@@ -28,9 +28,6 @@ exports.createPages = async ({ actions, graphql }) => {
         edges {
           node {
             id
-            name
-            tin
-            variant
           }
         }
       }

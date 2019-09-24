@@ -5,40 +5,107 @@ import tinsJson from '../data/tins/14500547.json'
 import { DateTime } from 'luxon'
 import '../components/3.css'
 
+const cefrRanges = [{
+  minValue: 10,
+  maxValue: 21.5,
+  label: '<A1'
+}, {
+  minValue: 21.5,
+  maxValue: 30,
+  label: 'A1'
+},{
+  minValue: 30,
+  maxValue: 42,
+  label: 'A2'
+},{
+  minValue: 42,
+  maxValue: 58.5,
+  label: 'B1'
+},{
+  minValue: 58.5,
+  maxValue: 75.5,
+  label: 'B2'
+},{
+  minValue: 75.5,
+  maxValue: 84.5,
+  label: 'C1'
+}, {
+  minValue: 84.5,
+  maxValue: 90,
+  label: 'C2'
+}]
+
+const dataset = (score, i) => <React.Fragment key={i}>
+  <rect
+    x={i*130+200}
+    y={420 - (score.gse) * 4}
+    width="115"
+    height={(score.gse) * 4}
+    style={{fill: "url(#grad)"}}
+    >
+  </rect>
+  <rect
+    x={i*130+200}
+    y={100}
+    width="115"
+    height={320}
+    style={{fill: "rgba(234, 238, 241, 0.3)"}}
+    >
+  </rect>
+  <text
+    x={i*130+257.5}
+    y={440 - (score.gse) * 4}
+    style={{
+    fill: "#fff",
+    fontSize: "12px",
+    "text-anchor":"middle"
+    }}
+  >
+    {score.gse}
+  </text>
+  <text
+    x={i*130+257.5}
+    width={115}
+    y={450}
+    style={{
+    fill: "#000",
+    fontSize: "12px",
+    "text-anchor":"middle"
+    }}
+  >
+    {score.label}
+  </text>
+</React.Fragment>
+
 export const ReportTemplate = ({
   versantlogo,
   pearsonlogo,
   partnerlogo
 }) => {
   const report = tinsJson;
-  return <React.Fragment>
+  return <div className="report">
     <header className="header">
       <div className="row">
         <div className="column1">
           <div className="versant-logo">
             <img src={versantlogo} alt="Versant logo" />
           </div>
-          <h2>English Placement Test</h2>
         </div>
         <div className="column2">
-          <div className="brands">
-            <img src={partnerlogo} alt="Co-brand logo" />
-            <img src={pearsonlogo} alt="Pearson logo" />
-          </div>
+          <img src={partnerlogo} alt="Co-brand logo" />
         </div>
       </div>
       <div className="row">
         <div className="column1">
-          <p className="label">Testee name:</p>
-          <h3 className="testtaker-name">{ report.name }</h3>
-        </div>
+          <h2>Versant English Test</h2></div>
         <div className="column2">
+          <h3 className="testtaker-name">{ report.name }</h3>
           <div className="column-50">
-            <p className="label">Completion Date</p>
+            <p className="label">Test Completion Date</p>
             <p className="value">{ DateTime.fromMillis(report.endTime).toFormat('dd MMMM yyyy')}</p>
           </div>
           <div className="column-50">
-            <p className="label">TIN</p>
+            <p className="label">Test Identification Number</p>
             <p className="value">{ report.tin }</p>
           </div>
         </div>
@@ -46,22 +113,158 @@ export const ReportTemplate = ({
     </header>
     <main className="row">
       <div className="column1">
-        <h3>Candidate's Capabilities</h3>
-        <p className="overall-score-descriptor">{report.mainScore.description}</p>
+      <h3>Current Skills and Knowledge</h3>
+      <p className="overall-score-descriptor">{report.mainScore.description}</p>
+      <div style={{margin:"0 auto"}}><svg className="graph"
+      height={420} width="100%">
+        <defs>
+          <linearGradient id="grad" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#017ea0" />
+            <stop offset="100%" stop-color="#0093bb" />
+          </linearGradient>
+        </defs>
+        <g transform="translate(-80,-40)">
+        <g transform="translate(80,55)">
+        <text
+        style={{
+          fill: "#003058",
+          fontSize: "11px",
+          fontWeight: "bold"
+        }}
+        >GSEGen</text>
+        </g>
+         <g className="xaxis2" transform="translate(125, 420)">
+           {Array.from({length: 81}, (v, i) => 
+           <React.Fragment key={i}>
+             {!(i%5) && <React.Fragment>
+             <rect
+             style={{
+              fill: "rgba(0,0,0,0.1)"
+            }}
+             x="0"
+             y={-i * 4}
+             height="1"
+             width={i%10 ? 10 : 45}
+             ></rect>
+             <rect
+             style={{
+              fill: !(i%10) ? "rgba(0,0,0,0.1)" : "rgba(0,0,0,0.05)"
+            }}
+             x="75"
+             y={-i * 4}
+             height="1"
+             width={505}
+             ></rect>
+             </React.Fragment>}
+             {!(i % 10) && 
+             <text
+             x={22}
+             y={-i * 4 + 5}
+             style={{
+               fontSize: "12px",
+               fill: "#005a71",
+               textAnchor: "middle"
+             }}>
+               {i + 10}
+             </text>
+             }
+            </React.Fragment>
+           )}
+         </g>
+         <g className="xaxis3" transform="translate(80,100)">
+         <text
+          x="-50"
+          y="-10"
+          style={{
+            fill: "#003058",
+            fontSize: "11px",
+            fontWeight: "bold"
+          }}
+          >CEFR</text>
+          {cefrRanges.map((range,i) => <React.Fragment><rect
+            key={i}
+            x={0}
+            y={0}
+            width={45}
+            height={(90-range.minValue) * 4}
+            style={{fill: "rgba(1, 143, 181, 0.4)"}}
+          >
+          </rect>
+          <text
+          x={20}
+          y={(90-(range.maxValue + range.minValue)/2) * 4 +5}
+          style={{
+            fontSize: "12px",
+            fill: "#fff",
+            textAnchor: "middle"
+          }}
+          >
+            {range.label}
+          </text>
+          </React.Fragment>)}
+        </g>
+        <g className="dataset">
+          {report.scores.map((score, i) => dataset(score, i))}
+        </g>
+        </g>
+      </svg></div>
+      </div>
+      <div className="column2">
+        <div className="main-score">
+          <div className="column-50">
+            <p className="gse-label">
+              Overall Score
+            </p>
+            <p className="gse-score">
+              <span className="gse-score-number">{report.mainScore.gse}</span>
+            </p>
+            <div className="scoreline">
+              <span className="score-legend">10</span>
+              <span className="score-legend end">/90</span>
+              <div className="score" style={{width: `${(report.mainScore.gse - 10) / 0.8}%`}}></div>
+            </div>
+            <p className="gse-label">
+              <b>GSE</b>GEN
+            </p>
+          </div>
+          <div className="column-50">
+            <p>The GSE is fici cora prem ut autae vollatibus ipsa nias estorporatus moluptis ma voluptam nulparc hitaquatia sedis qui doluptur aut a conesti quibus quasimp erferio. </p>
+          </div>
+        </div>
+        <div className="other-scales">
+          <h3>A GSEPRO Score of {report.mainScore.gse} is equivalent to</h3>
+          <h4>Versant: <span className="score">{report.mainScore.versant}</span> <span className="max">/80</span></h4>
+          <p>Pearson’s Versant tests have for many years expressed second language performance on a 20-80 scale. The Global Scale of English is now used for many of these tests.</p>
+          <h4>CEFR: <span className="score">{report.mainScore.cefr}</span></h4>
+          <p>The Common European Framework of Reference for Languages (CEFR) is an international standard for describing language ability. The levels describe progressive mastery of a language from Beginners at A1 to fully proficient users at C2.</p>
+        </div>
+      </div>
+    </main>
+    <div className="row"><hr/></div>
+    <div className="row">
+      <div className="column1">
+      <h3>Current Skills & Knowledge - Details</h3>
         {report.scores.map((score,i) =>
         <React.Fragment key={i}>
-        <h3 className="skill-scores">{score.label}:
+        <h3 className="skill-scores">{score.label}:&nbsp;
           <span className="skill-score">{score.gse}</span>
-          <span className="skill-max">/90</span>
+          <span className="skill-max"> /90</span>
           <div className="skill-other-scales">
-            <span className="scale-name">Versant:</span>
+            <span className="scale-name">Versant: </span>
             <span className="skill-score">{score.versant}</span>
             <span className="skill-max">/80</span>
-            <span className="scale-name">CEFR:</span>
+            <span className="scale-name">CEFR: </span>
             <span className="skill-score">{score.cefr}</span>
           </div>
         </h3>
+        <h4>Your capabilities:</h4>
         <p className="skill-descriptor">{score.description}</p>
+        <h4>Tips to improve:</h4>
+        <ul className="mocked">
+          {score.tips.map(tip => <li>
+            {tip}
+          </li>)}
+        </ul>
         </React.Fragment>
         )}
         <div className="other-skills">
@@ -69,59 +272,14 @@ export const ReportTemplate = ({
           {report.minorScores.map((score,i) =>
           <div className="column-50" key={i}>
             <h4>{score.label}</h4>
-            <p className="skill-descriptor">{score.definition}</p>
             <p className="skill-descriptor score">Level: {score.value}</p>
-            <p className="skill-descriptor">{score.description}</p>
+            <p className="skill-descriptor">{score.definition}</p>
           </div>)}
         </div>
       </div>
-      <div className="column2">
-        <div className="main-score">
-          <p className="gse-score">
-            <span className="gse-score-number">{report.mainScore.gse}</span>
-            <span>/90</span>
-          </p>
-          <p className="gse-label">
-            <b>GSE</b>PRO<b>Score</b>
-          </p>
-        </div>
-        <div className="other-scales">
-          <h3>A GSEPRO Score of 53<br/> is equivalent to</h3>
-          <h4>Versant: {report.mainScore.versant}</h4>
-          <p>Versant Gia que simaxim olorro endia soles
-dest, coria conecaborro eaquas conem aboratem et lab is ea nis eaquas ditem ipsam,
-omnis pa eaquodi dessi repeditaspel isit</p>
-          <h4>CEFR: {report.mainScore.cefr}</h4>
-          <p>Corresponding level in the Common European Framework of Reference.
-The Common European Framework divides
-learners into three broad divisions that can
-be divided into six levels.</p>
-          <h4>IELTS: 5.5 - 6.0</h4>
-          <p>The TOEIC Listening and Reading test is a
-paper-and-pencil, multiple-choice assessment that elicits responses in two sections
-(Listening and Reading).</p>
-          <h4>TOEFL iBT: 57 - 86</h4>
-          <p>The TOEIC Listening and Reading test is a
-paper-and-pencil, multiple-choice assessment that elicits responses in two sections
-(Listening and Reading).</p>
-        </div>
-      </div>
-    </main>
-    <div className="supplement-page">
-      <div className="column1 tips">
-        <h3>Tips to improve</h3>
-      {report.scores.map((score,i) => 
-        <div key={i}>
-          <h4>{score.label}</h4>
-          {score.tips.map((tip,j) => 
-          <p key={j} className="skill-descriptor">- {tip}</p>
-          )}
-        </div>
-      )}
-      </div>
       <div className="column2 definitions">
         <h3>Understanding your skills:</h3>
-        <h4>{report.mainScore.label}</h4>
+        <h4>Overall</h4>
         <p className="skill-descriptor">{report.mainScore.definition}</p>
         {report.scores.map((score,i) => 
           <React.Fragment key={i}>
@@ -131,21 +289,17 @@ paper-and-pencil, multiple-choice assessment that elicits responses in two secti
         )}
       </div>
     </div>
-  </React.Fragment>
+    <footer className="row">
+      <div className="column1">
+      <img src={pearsonlogo} alt="Pearson logo" width="120px"
+        height="40px"/><br/>
+        © 2019 Pearson Education, Inc. or its affiliate(s). All rights reserved.<br/>
+      Ordinate and Versant are trademarks, in the U.S. and/or other countries, of Pearson Education, Inc. or its affiliate(s). Other names may be the trademarks of their respective owners.<br/>
+      For more information, visit us online at www.VersantTests.com
+      </div>
+    </footer>
+  </div>
 }
-    // <section className="section">
-    //   <div className="container content">
-    //     <div className="columns">
-    //       <div className="column is-10 is-offset-1">
-            
-    //         <img src={versantlogo} />
-    //         <img src={pearsonlogo} />
-    //         <img src={partnerlogo} />
-            
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
 
 export default ({ data }) => 
   <Layout>

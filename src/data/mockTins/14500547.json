@@ -1,5 +1,5 @@
 {
-    "tin": "14500547",
+    "tin": 14500547,
     "name": "John Smith",
     "endTime": 1564507800000,
     "variant": 414,
@@ -8,18 +8,17 @@
         "gse": 51,
         "versant": 41,
         "cefr": "B1",
-        "description": "Candidate can handle many utterances using a variety of words and structures, and can follow and sometimes participate in a native-paced conversation. Pronunciation is mostly intelligible; candidate can express some composite information on familiar topics to a cooperative listener. Candidate understands texts using a variety of words and structures, and given enough time can produce written texts for general purposes. Writing contains errors or inappropriate word choice, but the message is clear to a sympathetic reader."
+        "description": "Candidate can handle many utterances using a variety of words and structures, and can follow and sometimes participate in a native-paced conversation. Pronunciation is mostly intelligible; candidate can express some composite information on familiar topics to a cooperative listener. Candidate understands texts using a variety of words and structures, and given enough time can produce written texts for general purposes. Writing contains errors or inappropriate word choice, but the message is clear to a sympathetic reader.",
+        "definition": "The Overall score of the test represents the ability to understand spoken and written English and respond appropriately in speaking and writing on everyday and workplace topics, at an appropriate pace and in intelligible English. Scores are based on a weighted combination of the four skill scores. Scores are reported in the range from 20 to 80."
     },
     "minorScores": [{
+        "label": "Typing speed",
+        "definition": "Typing speed is the number of words typed in one minute in the Typing task. For a valid Writing score, candidates should type faster than 12 WPM.",
+        "value": "34 words per minute"
+    }, {
         "label": "Typing accuracy",
         "definition": "Typing accuracy is a measure of how adequate the candidate’s typing is for written responses within the Versant English Placement test",
-        "value": "67% words typed accurately",
-        "description": "An accuracy of 67% means that some attention should be paid to the writing score - if it is low, then accuracy may have been a contributing factor."
-    }, {
-        "label": "Intelligibility",
-        "definition": "Intelligibility is a measure of how understandable a candidate is as a speaker",
-        "value": "4/5",
-        "description": "An intelligibility score of 4 means that this candidate’s speech is generally understandable, but that it sometimes requires a bit of effort on the part of listeners."
+        "value": "67 % words typed accurately"
     }],
     "scores":[{
         "label": "Speaking",

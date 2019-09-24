@@ -1,0 +1,75 @@
+{
+    "testName": "Versant English Placement Test",
+    "tin": 52501252,
+    "endTime": 1543954032000,
+    "variant": 414,
+    "mainScore": {
+        "label": "Overall Score",
+        "description": "Candidate can handle many utterances using a variety of words and structures, and can follow and sometimes participate in a native-paced conversation. Pronunciation is mostly intelligible; candidate can express some composite information on familiar topics to a cooperative listener. Candidate understands texts using a variety of words and structures, and given enough time can produce written texts for general purposes. Writing contains errors or inappropriate word choice, but the message is clear to a sympathetic reader.",
+        "scores": [
+            {
+                "name": "CEFR",
+                "score": "B1 - Independent User"
+            },
+            {
+                "name": "GSE",
+                "score": "48"
+            },
+            {
+                "name": "GSE80",
+                "score": "48"
+            },
+            {
+                "name": "VERSANT",
+                "score": "49.0"
+            }
+        ]
+    },
+    "basicSkills": [
+        {
+            "label": "Speaking",
+            "description": "Candidate produces some simple sentences. Candidate speaks with irregular phrasing or rhythm and mispronounces many consonants and vowels, resulting in a strong, intrusive non-English accent.",
+            "tips": null,
+            "scores": [
+                {
+                    "name": "VERSANT",
+                    "score": "40.0"
+                }
+            ]
+        },
+        {
+            "label": "Listening",
+            "description": "Candidate understands simple everyday conversational speech when it is spoken clearly and directed at him/her.",
+            "tips": null,
+            "scores": [
+                {
+                    "name": "VERSANT",
+                    "score": "43.0"
+                }
+            ]
+        },
+        {
+            "label": "Writing",
+            "description": "Candidate writes clear, connected texts on a variety of subjects using a sufficient range of grammatical structures and a good range of common English words.",
+            "tips": null,
+            "scores": [
+                {
+                    "name": "VERSANT",
+                    "score": "63.0"
+                }
+            ]
+        },
+        {
+            "label": "Reading",
+            "description": "Candidate reads, understands and responds to simple written texts, but has difficulty dealing with more complex texts.",
+            "tips": null,
+            "scores": [
+                {
+                    "name": "VERSANT",
+                    "score": "49.0"
+                }
+            ]
+        }
+    ],
+    "additionalSkills": []
+}
